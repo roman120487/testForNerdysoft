@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>User: {{userActive}}</h1>
+    <button class="logOut" routerLink='/sign' (click)="logOut()" >Log Out</button>
+
+    <div class="addTask" *ngIf="!share" >
+        <input type="text" [(ngModel)]="task" name="task" placeholder="typing task ...">
+        <button *ngIf="!toogle"  (click)="addTask()" >add task</button>
+        <button *ngIf="toogle"  class="saveBtn" (click)="saveTask()" >save</button>
+    </div>
+
+    <div class="share addTask" *ngIf="share">
+        <p>Select user</p>
+        <select id="" [(ngModel)]="emailCoAuthor" name="emailCoAuthor">
+            <option *ngFor="let item  of users| keyvalue"  value="{{item.key}}">{{item.key}}</option>
+        </select>
+        <button (click)="addCoAuthorTask()" >Share</button>
+    </div>
+
+    <div class="taskList">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Task's author</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of taskList | author:userActive; let i = index" >
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{task.task}}</td>
+                    <td>{{task.author}}</td>
+                    <td class="actions">
+                        <button class="deleteBtn" (click)="deleteTask(task.id)" >delete</button>
+                        <button class="editBtn"  (click)="editTask(task.task, task.id)" >edit</button>
+                        <button class="shareBtn"  (click)="shareTask(task.id)" >share</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+
+</div>

@@ -1,0 +1,83 @@
+.container {
+  width: 90%;
+  margin: 100px auto;
+  .logOut{
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .addTask {
+    margin-top: 25px;
+    padding: 25px;
+    input {
+      padding: 5px;
+      font-size: 18px;
+      //   margin: 25px;
+      width: 100%;
+    }
+    select{
+        width: 300px;
+        padding: 5px;
+        font-size: 20px;
+    }
+    button {
+      padding: 5px;
+      background-color: #a3d133;
+      color: white;
+      border-radius: 5px;
+      font-size: 22px;
+      outline: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .saveBtn {
+      background-color: orange;
+    }
+  }
+
+  .table {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 20px;
+    .thead-dark {
+      background-color: #2b303b;
+      color: whitesmoke;
+      font-size: 18px;
+    }
+    tr {
+      height: 40px;
+      td {
+        height: 70px;
+        padding-left: 10px;
+        text-align: center;
+      }
+    }
+    .actions{
+        display: flex;
+        flex-direction: row;
+    }
+    button{
+        font-size: 18px;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        color: white;
+    }
+    .deleteBtn{
+        background-color: #DC3545;
+    }
+    .editBtn{
+        background-color: #FFC107;
+        color: black;
+    }
+    .shareBtn{
+        background-color: #007BFF;
+    }
+
+  }
+}

@@ -1,0 +1,49 @@
+.container {
+  width: 70%;
+  margin: 150px auto;
+  border: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 200px;
+
+  .signIn,
+  .signUp {
+    width: 45%;
+    min-height: 150px;
+    margin: 15px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    // justify-content: center;
+    .title {
+      width: fit-content;
+      padding: 10px;
+      background-color: #a3d133;
+      color: white;
+      border-radius: 5px;
+      font-size: 22px;
+      margin: 0px auto;
+    }
+    input {
+      padding: 5px 15px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid lightgrey;
+    }
+    p {
+      font-size: 18px;
+      margin: 20px;
+    }
+    button {
+      width: 70%;
+      margin-top: 25px;
+      padding: 5px;
+      background-color: #a3d133;
+      color: white;
+      border-radius: 5px;
+      font-size: 22px;
+      outline: none;
+    }
+  }
+}

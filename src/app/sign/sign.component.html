@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="signIn">
+        <p class="title">Sign In</p>
+        <form>
+            <p>Email:</p>
+            <input type="text" [(ngModel)]="login" name="login" placeholder="enter email...">
+            <p>Введите пароль:</p>
+            <input type="password" [(ngModel)]="userPass" name="userPass" class="form-control"
+                placeholder="введите пароль...">
+            <button (click)="signIn()" type="button" routerLink='/main'>Авторизация</button>
+        </form>
+        <button *ngIf="authService.move"  routerLink='/main'>go to Main</button>
+    </div>
+
+
+    <div class="signUp">
+        <p class="title">Sign Up</p>
+        <form>
+            <p>Email:</p>
+            <input type="email" name="email" [(ngModel)]="email" placeholder="введите email...">
+            <p>Введите пароль:</p>
+            <input type="password" name="password" [(ngModel)]="password" placeholder="введите пароль...">
+            <p>Повторите пароль:</p>
+            <input type="password" name="confirm" [(ngModel)]="confirm" placeholder="введите пароль...">
+
+            <button type="submit" (click)="signUp()">Регистрация</button>
+        </form>
+    </div>
+</div>
